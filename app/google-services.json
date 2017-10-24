@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "446595938487",
+    "firebase_url": "https://listweed-b71d8.firebaseio.com",
+    "project_id": "listweed-b71d8",
+    "storage_bucket": "listweed-b71d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446595938487:android:d109ac33483a19f6",
+        "android_client_info": {
+          "package_name": "com.skyweednet.listweed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446595938487-2tf8atml51tfvn4g99912b4n0b9co8ev.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skyweednet.listweed",
+            "certificate_hash": "a37b4b38da0f6b58c35bc7b83dbd438c4418dfcc"
+          }
+        },
+        {
+          "client_id": "446595938487-c4uptr22uu5ddqvhbrcdfvbluker0cce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqCAT_dZ5Xtv9r1bE19cL28u8npg27vlU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446595938487-c4uptr22uu5ddqvhbrcdfvbluker0cce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
