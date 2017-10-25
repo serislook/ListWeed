@@ -6,26 +6,14 @@ package com.skyweednet.listweed.models;
 
 public class Samples {
 
-    private int position;
-    private String name;
+    public int id;
+    public String localized_name, name;
 
     public Samples() {
     }
 
-    public int getPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
 

@@ -1,9 +1,11 @@
 package com.skyweednet.listweed.adapters;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.skyweednet.listweed.main.MainActivity;
+import com.skyweednet.listweed.R;
 import com.skyweednet.listweed.views.FavoriteFragment;
 import com.skyweednet.listweed.views.SamplesFragment;
 
@@ -14,20 +16,25 @@ import com.skyweednet.listweed.views.SamplesFragment;
 public class PagerAdapter extends FragmentPagerAdapter {
 
 
-    public PagerAdapter(android.support.v4.app.FragmentManager supportFragmentManager, MainActivity mainActivity) {
-        super(supportFragmentManager);
+
+    private Context context;
+
+
+    public PagerAdapter (FragmentManager fm, Context context) {
+        super(fm);
+        this.context = context;
     }
 
     @Override
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return SamplesFragment.newIstance();
+                return SamplesFragment.newInstance();
             case 1:
-                return FavoriteFragment.newIntance();
+                return FavoriteFragment.newInstance();
 
             default:
-                return SamplesFragment.newIstance();
+                return SamplesFragment.newInstance();
         }
 
     }
@@ -41,12 +48,14 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "SAMPLES";
+                return context.getString(R.string.Samples);
             case 1:
-                return "FAVORITE SAMPLES";
+                return context.getString(R.string.Favorite);
+            default:
+                return context.getString(R.string.Samples);
 
         }
-        return null;
+
     }
 
 }

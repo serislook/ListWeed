@@ -24,20 +24,20 @@ public class SamplesAdapter extends FirebaseRecyclerAdapter<Samples, SamplesAdap
     @Override
     protected void populateViewHolder(final SamplesHolder viewHolder, Samples model, int position) {
        viewHolder.name.setText(model.getName());
-       // viewHolder.number.setText(model.getPosition());
+
 
     }
 
     public  static class SamplesHolder extends RecyclerView.ViewHolder {
 
-        TextView name, number;
+        TextView name;
 
 
 
         public SamplesHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.samplesTv);
-           // number = (TextView) itemView.findViewById(R.id.numberTv);
+
         }
     }
 }
