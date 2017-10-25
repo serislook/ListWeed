@@ -16,10 +16,6 @@ public class Nodes {
         return root.child("samples");
     }
 
-    public DatabaseReference favorites () {
-        return root.child("favorites").child(new CurrentUser().getCurrentUser().getUid());
-    }
-
 
     public Query prueba() {
 
