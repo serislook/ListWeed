@@ -7,4 +7,5 @@
     <color name="colorSecondary">#6fea3a</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="primary_text_default_material_light">#dee5dada</color>
 </resources>

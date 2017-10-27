@@ -36,7 +36,7 @@ public class SamplesAdapter extends FirebaseRecyclerAdapter<Samples, SamplesAdap
 
         public SamplesHolder(View itemView) {
             super(itemView);
-            name = (TextView) itemView.findViewById(R.id.samplesTv);
+            name = (TextView) itemView.findViewById(R.id.samplesRv);
 
         }
     }

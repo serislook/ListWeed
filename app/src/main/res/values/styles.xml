@@ -55,6 +55,7 @@
 
     <style name="FirebaseUI.Text.Link">
         <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:colorForeground">@color/authui_inputTextColorDark</item>
     </style>
 
 </resources>

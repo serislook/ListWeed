@@ -4,7 +4,6 @@ package com.skyweednet.listweed.views;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,11 +17,20 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.skyweednet.listweed.R;
+import com.skyweednet.listweed.adapters.SamplesAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FavoriteFragment extends Fragment {
+
+    private SamplesAdapter adapter;
+
+    public FavoriteFragment() {
+
+    }
+
+
 
 
 
@@ -46,7 +54,11 @@ public class FavoriteFragment extends Fragment {
         recycler.addItemDecoration(new SimpleDividerItemDecoration(getResources()));
         recycler.setHasFixedSize(true);
         recycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        recycler.setItemAnimator(new DefaultItemAnimator());
+        recycler.setHasFixedSize(true);
+
+        adapter = new SamplesAdapter();
+        recycler.setAdapter(adapter);
+
 
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -63,6 +75,7 @@ public class FavoriteFragment extends Fragment {
         recycler.setAdapter(adapter);
 
     }
+
 
 
     public static class FavHolder extends RecyclerView.ViewHolder {

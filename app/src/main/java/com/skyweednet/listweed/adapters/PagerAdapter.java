@@ -15,12 +15,10 @@ import com.skyweednet.listweed.views.SamplesFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
-
-
     private Context context;
 
 
-    public PagerAdapter (FragmentManager fm, Context context) {
+    public PagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }

@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private PagerAdapter mSectionsPagerAdapter;
 
+
     private ViewPager mViewPager;
 
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mSectionsPagerAdapter = new PagerAdapter(getSupportFragmentManager(),this);
+
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);

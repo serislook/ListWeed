@@ -16,12 +16,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.skyweednet.listweed.R;
+import com.skyweednet.listweed.adapters.SamplesAdapter;
 import com.skyweednet.listweed.models.Samples;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class SamplesFragment extends Fragment {
+
+    private SamplesAdapter adapter;
 
 
 
@@ -42,9 +45,13 @@ public class SamplesFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.samplesRv);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.samplesRv);
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getResources()));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(true);
+
+        adapter = new SamplesAdapter();
+        recyclerView.setAdapter(adapter);
 
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("samples");
@@ -55,6 +62,7 @@ public class SamplesFragment extends Fragment {
                 viewHolder.setName(model.localized_name);
 
             }
+
         };
 
         recyclerView.setAdapter(adapter);
